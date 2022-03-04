@@ -30,7 +30,18 @@ export class LoginComponent implements OnInit {
       this._auth.login(this.loginForm.value).subscribe(
         (data)=>{
           console.log(data)
-          localStorage.setItem("g15Token", data.data.token)
+          if(data.data.userRole=="editor"){
+
+            this._router.navigateByUrl("/editor")
+          }
+
+          if(data.data.userRole=="viewer"){
+
+            this._router.navigateByUrl("/viewer")
+          }
+          localStorage.setItem("", data.data.token)
+          localStorage.setItem("role", data.data.role)
+
         },
         (err)=>{
           this.msg="Unauthorized"
@@ -47,10 +58,21 @@ export class LoginComponent implements OnInit {
             },
             ()=>{
               this._router.navigateByUrl("/home")
+
+              this._router.navigateByUrl("/home")
+
             }
           )
         }
       )
     }
   }
+
+  //function to redirect to viwer page //
+isViwier(){
+
+}
+//function to redirect to editor page //
+isEditor(){
+}
 }
