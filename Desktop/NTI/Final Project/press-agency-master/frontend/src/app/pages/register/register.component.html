@@ -15,22 +15,22 @@
         </div>
         <div class="mb-3">
             <label>Email</label>
-            <input placeholder="Email " class="form-control" formControlName="email ">
+            <input placeholder="Email " class="form-control" formControlName="email">
         </div>
         <div class="mb-3">
             <label>Password</label>
-            <input formControlName=" password " placeholder="password" type="password" class="form-control">
+            <input formControlName="password" placeholder="password" type="password" class="form-control">
         </div>
         <div class="mb-3">
             <label>Birthdate</label>
             <input formControlName="birthDate" placeholder="BirthDate" type="date" class="form-control">
-            <div class="alert alert-danger my-3">
-                <!-- <p *ngIf="birthDate.errors?.['required']">birth date is required</p> -->
-            </div>
+            <!-- <div class="alert alert-danger my-3">
+                <p *ngIf="birthDate.errors?.['required']">birth date is required</p>
+            </div> -->
         </div>
         <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupSelect01">User Role</label>
-            <select class="form-select" id="inputGroupSelect01">
+            <select class="form-select" formControlName="userRole" id="inputGroupSelect01">
               <option selected>choose...</option>
               <option value="editor">editor</option>
               <option value="viewer">viewer</option>
