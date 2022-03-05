@@ -10,7 +10,8 @@ import { EditiorComponent } from './pages/editior/editior.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import{ HttpClientModule }  from '@angular/common/http' ;
+import{ HttpClientModule }  from '@angular/common/http';
+import { ErrorComponent } from './pages/error/error.component' ;
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import{ HttpClientModule }  from '@angular/common/http' ;
     AdminComponent,
     LoginComponent,
     RegisterComponent,
+    ErrorComponent,
     
     
     

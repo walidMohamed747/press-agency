@@ -20,6 +20,9 @@ login(data : User):Observable<any>{
   console.log(data)
   return this._http.post(`${this.commonApiUrl}api/user/login` , data)
   }
+  logout(data:User):Observable<any>{
+    return this._http.post(`${this.commonApiUrl}api/user/logout` , data)
+  }
 
   me():Observable<any>{
     return this._http.get(`${this.commonApiUrl}api/user/me`)

@@ -33,7 +33,9 @@ register(){
       (data)=>{
         console.log(data)
         if (data.apiStatus == true)this._router.navigateByUrl("/login")
-    }
+    },
+    (err)=>{this._router.navigateByUrl(err)},
+    ()=>{this._router.navigateByUrl("/error")}
     )
   }
 }
