@@ -1,6 +1,7 @@
 import { User } from './../models/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Post } from '../models/post';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,9 @@ login(data : User):Observable<any>{
   }
   logout(data:User):Observable<any>{
     return this._http.post(`${this.commonApiUrl}api/user/logout` , data)
+  }
+  addpost(data : Post){
+    return this._http.post(`${this.commonApiUrl}api/editor/addPost` , data)
   }
 
   me():Observable<any>{

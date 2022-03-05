@@ -1,7 +1,6 @@
 import { AuthService } from './../../providers/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { min } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -59,7 +58,7 @@ export class LoginComponent implements OnInit {
             ()=>{
               this._router.navigateByUrl("/user")
 
-              this._router.navigateByUrl("user")
+              this._router.navigateByUrl("/user")
 
             }
           )

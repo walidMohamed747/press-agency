@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/providers/auth.service';
 })
 export class UserComponent implements OnInit {
 posts : Post[] =[]
-
+isLoaded = false
   constructor(private _auth : AuthService , private routr : Router ) { }
 
   ngOnInit(): void {
